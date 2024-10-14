@@ -1,12 +1,12 @@
 import './App.css';
 
-import CombinePage from './combinePages';
+import DashboardPage from './userpage/dashboard';
 
 function App() {
   return (
     <div className="App">
 
-      <CombinePage />
+      <DashboardPage />
 
     </div>
   );

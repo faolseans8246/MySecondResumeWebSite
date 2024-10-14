@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Umumiy uslublar */
+.dashboard-container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: start;
+    padding-right: 30px; /* Space from the right edge */
+}
+
+/* Light va dark holatlari */
+.dashboard-container.light {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.dashboard-container.dark {
+    background-color: #171d2a;
+    color: #fff;
+}
+
+.dashboard-mode-part {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Toggle button uslubi */
+.mode-toggle-button {
+    background-color: #004d4d;
+    padding: 10px;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Menyu uslublari */
+.right-menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Fix the menu on the right side */
+    right: 50px; /* Adjust space from the right */
+    /*top: 50%; !* Center vertically *!*/
+    /*transform: translateY(-50%); !* Offset by half of its height to be perfectly centered *!*/
+}
+
+.dashboard-menu-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-iconka-buttons {
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.menu-iconka-buttons:hover {
+    background-color: #004d4d;
+}
