@@ -6,11 +6,11 @@ body {
 /* Umumiy uslublar */
 .dashboard-container {
     transition: background-color 0.3s ease, color 0.3s ease;
-    height: 100vh;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: start;
-    padding-right: 30px; /* Space from the right edge */
+    height: 100vh;
+    justify-content: space-between; /* O'ng tarafdagi menyu va lenta qismi yonma-yon bo'lishi uchun */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Light va dark holatlari */
@@ -24,14 +24,24 @@ body {
     color: #fff;
 }
 
+/* Lenta qismi */
+.dashboard-lenta-page {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Vertikal markazlash */
+    justify-content: center; /* Gorizontal markazlash */
+    padding-right: 20px;
+}
+
+/* Light va dark mode toggle */
 .dashboard-mode-part {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Toggle button uslubi */
 .mode-toggle-button {
-    background-color: #004d4d;
+    background-color: #171d2a;
     padding: 10px;
     border-radius: 50%;
     height: 70px;
@@ -51,16 +61,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    position: fixed; /* Fix the menu on the right side */
-    right: 50px; /* Adjust space from the right */
-    /*top: 50%; !* Center vertically *!*/
-    /*transform: translateY(-50%); !* Offset by half of its height to be perfectly centered *!*/
+    position: fixed;
+    right: 50px; /* O'ng tarafga joylash */
+    height: 100%; /* To'liq ekran bo'ylab */
 }
 
 .dashboard-menu-blocks {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .menu-iconka-buttons {
@@ -76,7 +86,7 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .menu-iconka-buttons:hover {

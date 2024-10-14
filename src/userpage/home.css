@@ -1,0 +1,148 @@
+.homepage-conatainers {
+    display: flex;
+    justify-content: space-between; /* Ikkala qism o'rtasidagi masofani taqsimlash uchun */
+    align-items: start; /* Vertikal markazlash uchun */
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto; /* O'rtaga joylashtirish uchun */
+}
+
+.home-left-part, .home-and-button-block {
+    flex: 1; /* Har bir qismga teng joy ajratish uchun */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px;
+}
+
+.home-my-name-part {
+    margin-bottom: 100px;
+}
+
+/* Rasmning o'lchami */
+.home-page-main-image {
+    width: 100%;
+    max-width: 400px; /* Rasmning maksimal kengligi */
+    border-radius: 50%; /* Dumaloq shaklga o'zgartirish uchun */
+}
+
+.home-buttons-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.home-link-buttons-part {
+    margin: 10px;
+    font-size: 24px; /* Ikonkalarni kattalashtirish uchun */
+}
+
+.home-text-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 170px;
+}
+
+.home-main-text {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    color: #5353ea;
+}
+
+.home-main-text.dark {
+    color: deepskyblue;
+}
+
+.home-sub-text {
+    font-size: 18px;
+    text-align: start;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* dashboard.css */
+.dashboard-container.light {
+    background-color: #f0f0f0;
+}
+
+.dashboard-container.dark {
+    background-color: #171d2a;
+}
+
+.home-my-name-is.light {
+    color: #171d2a; /* Light mode matn rangi */
+}
+
+.home-my-name-is {
+    transition: color 0.3s ease; /* Rang o'zgarishi uchun animatsiya */
+}
+
+.home-my-name-is.light {
+    color: #043ae8; /* Light mode rang */
+}
+
+.home-my-name-is.dark {
+    color: #40ff00; /* Dark mode rang */
+}
+
+/* Linklar bilan ishlash qismi */
+
+.home-buttons-blocks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-link-buttons-part {
+    text-decoration: none;
+}
+
+.home-link-icons.light {
+    border: none;
+    border-radius: 50%;
+    background-color: #b3b1b1;
+    color: black;
+    padding: 10px;
+}
+
+.home-link-icons.dark {
+    border: none;
+    border-radius: 50%;
+    background-color: #293729;
+    color: white;
+    padding: 10px;
+}
+
+.home-facebook:hover {
+    color: #4848fb;
+}
+
+.home-instagram:hover {
+    color: deeppink;
+}
+
+.home-telegram:hover {
+    color: #5353ea;
+}
+
+.home-github:hover {
+    color: black;
+}
+
+.home-youtube:hover {
+    color: red;
+}
+
+.home-linkedin:hover {
+    color: #5353ea;
+}
+
+.home-whatsapp:hover {
+    color: #56a33c;
+}

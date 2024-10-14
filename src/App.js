@@ -1,12 +1,12 @@
 import './App.css';
 
-import DashboardPage from './userpage/dashboard';
+import ConnectPages from "./connectPages";
 
 function App() {
   return (
     <div className="App">
 
-      <DashboardPage />
+      <ConnectPages />
 
     </div>
   );

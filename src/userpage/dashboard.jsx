@@ -7,6 +7,11 @@ import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdContactMail } from "react-icons/md";
 
+// Lenta qismini shakllantirish
+import HomePage from './home';
+import ResumePage from './resume';
+
+
 function DashboardFunc() {
     const [theme, setTheme] = useState("light");
 
@@ -25,27 +30,34 @@ function DashboardFunc() {
         localStorage.setItem("theme", newTheme); // Tanlangan modeni saqlash
     };
 
+
     return (
         <div className={`dashboard-container ${theme}`}>
+
+            <div className="dashboard-lenta-page">
+                {/*<HomePage theme={theme}/>*/}
+                <ResumePage theme={theme} />
+            </div>
+
             {/* O'ng tarafdagi menyu qismi */}
             <div className="right-menu-bar">
 
                 {/* Light va dark mode toggle */}
                 <div className="dashboard-mode-part">
                     <button className="mode-toggle-button" onClick={toggleTheme}>
-                        {theme === "light" ? <FaSun /> : <FaMoon />}
+                        {theme === "light" ? <FaMoon/> : <FaSun/>}
                     </button>
                 </div>
 
                 {/* Menyu bloklari */}
                 <div className="dashboard-menu-blocks">
                     <div className="dashboard-menu-buttons">
-                        <button className="menu-iconka-buttons"><FaHome /></button>
-                        <button className="menu-iconka-buttons"><RiContactsFill /></button>
-                        <button className="menu-iconka-buttons"><FaLaptopCode /></button>
-                        <button className="menu-iconka-buttons"><TfiLayoutMediaCenterAlt /></button>
-                        <button className="menu-iconka-buttons"><BiSolidPhoneCall /></button>
-                        <button className="menu-iconka-buttons"><MdContactMail /></button>
+                        <button className="menu-iconka-buttons"><FaHome/></button>
+                        <button className="menu-iconka-buttons"><RiContactsFill/></button>
+                        <button className="menu-iconka-buttons"><FaLaptopCode/></button>
+                        <button className="menu-iconka-buttons"><TfiLayoutMediaCenterAlt/></button>
+                        <button className="menu-iconka-buttons"><BiSolidPhoneCall/></button>
+                        <button className="menu-iconka-buttons"><MdContactMail/></button>
                     </div>
                 </div>
             </div>
