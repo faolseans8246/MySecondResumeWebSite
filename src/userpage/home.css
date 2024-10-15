@@ -3,6 +3,7 @@
     justify-content: space-between; /* Ikkala qism o'rtasidagi masofani taqsimlash uchun */
     align-items: start; /* Vertikal markazlash uchun */
     padding: 20px;
+    height: 90vh;
     max-width: 1500px;
     margin: 0 auto; /* O'rtaga joylashtirish uchun */
 }

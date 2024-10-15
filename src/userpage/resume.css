@@ -1,11 +1,205 @@
 
+
 .resume-containers {
     display: flex;
     justify-content: space-between; /* Ikkala qism o'rtasidagi masofani taqsimlash uchun */
     align-items: start; /* Vertikal markazlash uchun */
     padding: 20px;
-    max-width: 1080px;
+    max-width: 920px;
     margin: 0 auto; /* O'rtaga joylashtirish uchun */
+    height: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light va dark holatlari */
+.resume-containers.light {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.resume-containers.dark {
+    background-color: #171d2a;
+    color: #fff;
+}
+
+/* Qatorlarni tartiblash qismi */
+.resume-about-me-block {
+    padding: 10px;
+}
+
+.resume-about-me-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #40ff00;
+}
+
+.resume-about-me-text.light {
+    color: #043ae8;
+}
+
+.resume-about-me-text-block b {
+    display: inline;
+    margin-right: 10px;
+    color: deepskyblue;
+}
+
+.resume-about-me-text-block {
+    margin-bottom: 10px;
+}
+
+.resume-about-me-text-lines {
+    display: inline;
+    margin-left: 10px;
+}
+
+.resume-about-me-line-xx {
+    margin: 50px 250px;
+}
+
+.resume-about-me-activity-main-text {
+    display: flex;
+    justify-content: center;
+    color: #40ff00;
+}
+
+.resume-about-me-activity-main-text.light {
+    color: #043ae8;
+}
+
+.resume-about-me-activity-line-block b {
+    display: inline;
+    color: deepskyblue;
+}
+
+.resume-about-me-activity-block-line {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* Sub block bilan ishlash qismi */
+
+.resume-staj-main-text {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-staj-text {
+    color: #40ff00;
+}
+
+.resume-staj-text.light {
+    color: #043ae8;
+}
+
+.resume-staj-my-box-blocks {
+    display: flex;
+    justify-content: center; /* Bloklarni gorizontal markazlash */
+    align-items: center; /* Vertikal markazlash uchun */
+    flex-wrap: wrap; /* Ekran o'lchami kichrayganda bloklar yangi qatorga o'tadi */
+    gap: 20px; /* Bloklar orasidagi masofa */
+    padding: 20px; /* Tashqi bo'sh joy */
+}
+
+.resume-staj-block-box {
+    border-radius: 10px;
+    height: 300px;
+    display: inline-block;
+    width: 30%; /* Har bir blok ekran kengligining 30 foizini oladi */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 50px 15px;
+    background-color: #232e47;
+}
+
+.resume-staj-block-box.light {
+    /*border: 1px solid #171d2a;*/
+    background-color: white;
+}
+
+.resume-counter-number-block {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: deepskyblue;
+}
+
+.resume-sub-text-part {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resume-sub-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.resume-sub-text-main-line {
+    margin-top: 20px;
+}
+
+.resume-sub-text-icons,
+.resume-sub-text-main-line {
+    display: inline-block;
+}
+
+/* Work activities block */
+.resume-work-activities-text {
+    display: flex;
+    justify-content: center;
+    color: #40ff00;
+    margin-bottom: 70px;
+}
+
+.resume-work-activities-text.light {
+    color: #043ae8;
+}
+
+.resume-work-activities-block {
+    display: block; /* Flexni o'chirib, har bir elementni alohida qatorga chiqaramiz */
+    justify-content: center;
+    padding: 20px;
+    width: 800px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-work-activities-block.dark {
+    background-color: #171d2a;
+}
+
+.resume-work-activity-block {
+    width: 100%; /* Block kengligini 100% qilib, har bir blokni to'liq qator qilib ko'rsatamiz */
+    margin-bottom: 20px; /* Har bir blokning pastidan bo'sh joy qoldiramiz */
+    background-color: #232e47;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-work-activity-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.resume-work-activity-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.resume-work-position,
+.resume-work-duration,
+.resume-work-description {
+    margin-bottom: 10px;
+}
+
+.resume-work-expirence-error-note {
 
 }
 
+.resume-work-expirence-error-note.dark {
+    color: black;
+}

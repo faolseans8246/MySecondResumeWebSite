@@ -7,13 +7,13 @@ import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdContactMail } from "react-icons/md";
 
-// Lenta qismini shakllantirish
+// Sahifalar
 import HomePage from './home';
 import ResumePage from './resume';
 
-
 function DashboardFunc() {
     const [theme, setTheme] = useState("light");
+    const [currentPage, setCurrentPage] = useState("home"); // Sahifa tanlash holati
 
     // Local storage orqali oldingi tanlangan modeni olish
     useEffect(() => {
@@ -30,13 +30,21 @@ function DashboardFunc() {
         localStorage.setItem("theme", newTheme); // Tanlangan modeni saqlash
     };
 
+    // Sahifani tanlash funksiyasi
+    const renderPage = () => {
+        if (currentPage === "home") {
+            return <HomePage theme={theme} />;
+        } else if (currentPage === "resume") {
+            return <ResumePage theme={theme} />;
+        }
+        return null; // Boshqa sahifalarni keyinchalik qo'shish mumkin
+    };
 
     return (
-        <div className={`dashboard-container ${theme}`}>
+        <div className={`dashboard-container dashboard-size ${theme}`}>
 
             <div className="dashboard-lenta-page">
-                {/*<HomePage theme={theme}/>*/}
-                <ResumePage theme={theme} />
+                {renderPage()} {/* Tanlangan sahifa ko'rsatiladi */}
             </div>
 
             {/* O'ng tarafdagi menyu qismi */}
@@ -52,9 +60,19 @@ function DashboardFunc() {
                 {/* Menyu bloklari */}
                 <div className="dashboard-menu-blocks">
                     <div className="dashboard-menu-buttons">
-                        <button className="menu-iconka-buttons"><FaHome/></button>
+                        <button
+                            className="menu-iconka-buttons"
+                            onClick={() => setCurrentPage("home")} // Home sahifasiga o'tish
+                        >
+                            <FaHome/>
+                        </button>
+                        <button
+                            className="menu-iconka-buttons"
+                            onClick={() => setCurrentPage("resume")} // Resume sahifasiga o'tish
+                        >
+                            <FaLaptopCode/>
+                        </button>
                         <button className="menu-iconka-buttons"><RiContactsFill/></button>
-                        <button className="menu-iconka-buttons"><FaLaptopCode/></button>
                         <button className="menu-iconka-buttons"><TfiLayoutMediaCenterAlt/></button>
                         <button className="menu-iconka-buttons"><BiSolidPhoneCall/></button>
                         <button className="menu-iconka-buttons"><MdContactMail/></button>
